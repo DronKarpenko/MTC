@@ -1,0 +1,511 @@
+@import reset
+@import media
+
+$accent-color: #E21E26
+
+body
+    width: 100%
+    min-width: 375px
+    position: relative
+    font-family: 'Arial', sans-serif
+.container
+    max-width: 1200px
+    margin: 0 auto
+    box-sizing: border-box
+
+h2
+    font-family: 'Verdana', sans-serif
+    font-weight: 700
+    font-size: 30px
+    color:#0F0F0F
+    margin: 0 auto 68px
+    text-align: center
+
+
+.flex
+    display: flex
+    justify-content: space-between
+
+.button-connect
+    display: inline-block
+    color: #ffffff
+    font-size: 20px
+    background-color: $accent-color
+    padding: 19px 40px 20px
+    border-radius: 5px
+    border: none
+    font-family: 'Verdana', sans-serif
+    cursor: pointer
+.light-btn
+    background-color: #ffffff
+    font-size: 20px
+    color: #000000
+    padding: 19px 40px 20px
+    border-radius: 5px
+    font-family: 'Verdana', sans-serif
+    display: inline-block
+    border: none
+    cursor: pointer
+
+.action
+    border-bottom: 2px solid #E21E26
+
+section
+    background-color: #E5E5E5
+
+// -----------------------BURGER-MENU--------------------
+
+.burger-menu
+	width: 50px
+	height: 50px
+	background-color: #dddddd
+	border: none
+	position: absolute
+	top: 20px
+	right: 20px
+	border-radius: 10px
+	z-index: 200
+.burger-menu
+    display: none
+.sandwich
+  width: 28px
+  height: 28px
+  display: block
+  position: absolute
+  top: 8px
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+  cursor: pointer
+
+.sw-topper,
+.sw-bottom,
+.sw-footer
+    position: relative
+    width: 28px
+    height: 3px
+    background: $accent-color
+    border: none
+    border-radius: 4px 4px 4px 4px
+    display: block
+
+.sw-topper
+	top: 0
+	transition: transform 0.5s, top 0.2s
+
+.sw-bottom
+    top: 6.6px
+    transition: transform 0.5s, top 0.2s
+    transition-delay: 0.2s, 0s 
+
+.sw-footer
+    top: 13.5px
+    transition: all 0.5s
+    transition-delay: 0.1s 
+
+.sandwich.active 
+  .sw-topper
+    top: 9px
+    transform: rotate(-45deg)
+  .sw-bottom
+    top: 6px
+    transform: rotate(45deg)
+  .sw-footer
+    opacity: 0
+    top: 0
+    transform: rotate(180deg)
+
+.rates.active
+    position: fixed
+    width: 100%
+    height: 200px
+    background-color: rgba(255, 255, 255, 0.9)
+    z-index: 50
+    top: 0
+    right: 0
+    display: block
+    transition: all 0.5s
+    overflow: auto
+    ul
+        position: absolute
+        width: 100%
+        top: 50%
+        transform: translateY(-50%)
+
+// -----------------------------------HEADER---------------------------
+
+header
+    padding: 40px 0 32px
+.header-top
+    margin-bottom: 44px
+.support
+    width: 55%
+    font-size: 18px
+    align-items: center
+    a
+        color: #0b0b0b
+    a.button-connect
+        color: #ffffff
+.support-item
+    position: relative
+    &::before
+        position: absolute
+        left: -30px
+        bottom: 2px
+        content: ''
+        background-image: url(../img/support.svg)
+        background-repeat: no-repeat
+        height: 20px
+        width: 20px
+.geo::before
+    background-image: url(../img/geo.svg)
+    left: -25px
+
+.rates
+    font-family: 'Verdana', sans-serif
+    font-size: 24px
+    a
+        color: #0F0F0F
+        &:hover
+            border-bottom: 2px solid #E21E26
+
+// ----------------------------------BANNER--------------------------
+
+.banner
+    background: url(../img/banner.jpg) center center no-repeat
+    background-size: cover
+    padding: 110px 0
+
+.intro
+    text-align: center
+    color: #ffffff
+    font-family: 'Verdana', sans-serif
+    font-size: 36px
+    width: 70%
+    margin: 0 auto
+    h1
+        line-height: 56px
+    span
+        display: block
+        font-size: 150px
+        font-weight: 700
+        line-height: 254px
+
+// -----------------------------------CONNECT----------------------------
+
+.connect
+    padding: 100px 0
+    .container
+        background: #FEFEFE
+        box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.13)
+        border-radius: 10px
+        padding: 60px 40px 80px
+        align-items: flex-end
+        .button-connect
+            font-size: 24px
+.connect-step
+    position: relative
+    text-align: center
+    width: 14%
+    &::after
+        content: ''
+        position: absolute
+        right: -70px
+        bottom: 10px
+        height: 25px
+        width: 14px
+        background-image: url(../img/arrow.svg)
+.step-text
+    color: #212121
+    font-size: 20px
+    line-height: 23px
+    margin-top: 20px
+.choose
+    margin-bottom: 10px
+.consultation
+    margin-top: 15px
+.order
+    margin-top: 11px
+
+// -----------------------------------TARIFF-------------------------
+.tariff .container
+    flex-wrap: wrap
+.tariff-item
+    position: relative
+    width: 30%
+    padding: 55px 25px 25px
+    background: #FFFFFF
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.13)
+    border-radius: 10px
+    text-align: center
+    margin-bottom: 60px
+    box-sizing: border-box
+    .button-connect
+        font-size: 18px
+    &_name
+        font-size: 20px
+        font-weight: 700
+        margin-bottom: 40px
+    &_price
+        position: relative
+        font-family: 'Verdana', sans-serif
+        font-size: 58px
+        font-weight: 700
+        &::after
+            content: '\20BD'
+            position: absolute
+            right: 20%
+            top: 5px
+            font-size: 24px
+            font-weight: normal
+        span
+            display: block
+            font-size: 17px
+            font-weight: normal
+            margin: 10px 0 25px
+    &_conditions
+        border-top: 1px solid #E6E6E6
+        border-bottom: 1px solid #E6E6E6
+        padding: 24px 0 0 60px
+        margin-bottom: 20px
+        font-size: 19px
+        line-height: 24px
+        text-align: left
+
+.conditions-item
+    margin-bottom: 24px
+    position: relative
+    &::before
+        position: absolute
+        content: ''
+        top: 50%
+        left: -50px
+        transform: translateY(-50%)
+        width: 35px
+        height: 35px
+        background-image: url(../img/speed.svg)
+        background-repeat: no-repeat
+.mobile::before
+    background-image: url(../img/mobile.svg)
+    left: -56px
+    height: 45px
+.channel::before
+    background-image: url(../img/channel.svg)
+
+.accessories
+    margin-bottom: 17px
+    font-size: 14px
+    line-height: 19px
+    p
+        text-align: left
+.more-info
+    display: block
+    text-align: center
+    color: #9D9D9D
+    font-size: 14px
+    margin-bottom: 32px
+    padding-top: 10px
+
+input[type="checkbox"]
+    position: relative
+    width: 36px
+    height: 18px
+    background-color: #EAEAEA
+    border-radius: 57px
+    -webkit-appearance: none
+    outline: none
+    transition: .3s
+    cursor: pointer
+input:checked[type="checkbox"]
+    background: $accent-color
+input[type="checkbox"]:before
+    position: absolute
+    top: 50%
+    left: 3px
+    transform: translateY(-50%)
+    content: ''
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    background: #C4C4C4
+    transition: .3s
+input:checked[type="checkbox"]:before
+    left: 20px
+
+.promotion
+    position: absolute
+    left: 0
+    top: 0
+    display: inline-block
+    font-size: 16px
+    font-weight: 700
+    color: #ffffff
+    text-transform: uppercase
+    background-color: $accent-color
+    background: linear-gradient(-70deg, transparent 15px, $accent-color 0)
+    padding: 13px 35px 14px 30px
+    border-top-left-radius: 10px
+
+.old-price
+    position: absolute
+    font-size: 24px
+    color: #D0D0D0
+    top: -14px
+    left: 15%
+    font-weight: normal
+    .line
+        position: absolute
+        left: -10px
+        top: 0
+        width: 65px
+        border-bottom: 2px solid #D0D0D0
+        transform: rotate(-38.11deg)
+
+.home-net
+    padding-top: 60px
+    .container
+        justify-content: flex-start
+        .tariff-item
+            margin-right: 67px
+
+
+// ---------------------------------PROFIT----------------------------
+
+.profit
+    padding: 25px 0 70px
+    .container
+        background: url(../img/profit-banner.jpg) center center no-repeat
+        background-size: cover
+        border-radius: 15px
+.proposition
+    width: 50%
+    box-sizing: border-box
+    padding: 90px 0 90px 100px
+    font-family: 'Verdana', sans-serif
+    color: #ffffff
+    font-size: 20px
+.first-month
+    font-size: 48px
+    line-height: 56px
+    font-weight: 700
+    margin: 43px 0
+
+// ---------------------------------FEEDBACK-------------------------
+
+.feedback
+    padding-bottom: 133px
+    .container
+        background: #FFFFFF
+        box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.13)
+        border-radius: 10px
+.feedback-title
+    font-size: 40px
+    line-height: 48px
+    margin: 0
+    padding: 37px 0 10px
+.feedback-descr
+    font-size: 24px
+    line-height: 28px
+    text-align: center
+    margin-bottom: 35px
+
+form
+    width: 65%
+    margin: 0 auto
+    font-size: 20px
+    padding-bottom: 33px
+    .button-connect
+        display: block
+        margin: 50px auto 0
+        cursor: pointer
+.point
+    margin-bottom: 32px
+.fio
+    input
+        width: 30%
+        color: #979797
+        padding: 15px 23px
+        box-sizing: border-box
+        border: 1px solid #C8C8C8
+        border-radius: 5px
+.phone-number
+    width: 100%
+    color: #979797
+    padding: 15px 23px
+    box-sizing: border-box
+    border: 1px solid #C8C8C8
+    border-radius: 5px
+    margin: 32px 0 27px
+.address
+    input
+        color: #979797
+        padding: 15px 23px
+        box-sizing: border-box
+        border: 1px solid #C8C8C8
+        border-radius: 5px
+        margin: 12px 0 30px
+        width: 15%
+    .address-text
+        width: 45%
+.ad
+    font-size: 18px
+    color: #6F6F6F
+    margin-bottom: 11px
+.privacy-policy
+    font-size: 18px
+    line-height: 23px
+    color: #6F6F6F
+    a
+        text-decoration: underline
+        color: #6F6F6F
+
+// --------------------------------questions------------------------
+
+.questions
+    padding-bottom: 100px
+    .container
+        background-color: $accent-color
+        border-radius: 15px
+        padding: 45px 0 63px
+        text-align: center
+        color: #ffffff
+        h2
+            font-size: 36px
+            color: #ffffff
+            margin-bottom: 20px
+        p
+            font-size: 18px
+            line-height: 21px
+            width: 54%
+            margin: 0 auto
+            margin-bottom: 44px
+.question-btn
+    font-family: 'Verdana', sans-serif
+    font-size: 18px
+    color: #000000
+    text-align: center
+    padding: 19px 0
+    box-shadow: border-box
+    border-radius: 5px
+    background-color: #ffffff
+    width: 24%
+    display: inline-block
+    margin-right: 20px
+    border: 1px solid #FFFFFF
+    transition: all .3s
+    cursor: pointer
+    &:hover        
+        color: #ffffff
+        background-color: $accent-color
+
+// ---------------------------------FOOTER---------------------------
+footer
+    background-color: #B6B6B6
+    padding: 32px 0 50px
+    h3
+        font-size: 18px
+.footer-text
+    margin-top: 16px
+    font-size: 14px
+    line-height: 16px
